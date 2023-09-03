@@ -7,18 +7,16 @@ const Filter = ({ onFilter }) => {
   const [ratingFilter, setRatingFilter] = useState('');
 
   const handleTitleChange = event => {
-    const titlefiltrech= event.target.value
-
-    setTitleFilter(titlefiltrech);
-    onFilter({ title:titlefiltrech, rating: ratingFilter });
+    const titleFilter = event.target.value;
+    setTitleFilter(titleFilter);
+    onFilter({ title: titleFilter, rating: ratingFilter });
   };
-
+  
   const handleRatingChange = event => {
-    const ratingfiltrech= event.target.value
-    setRatingFilter(ratingfiltrech);
-    onFilter({ title: titleFilter, rating: ratingfiltrech });
+    const ratingFilter = event.target.value;
+    setRatingFilter(ratingFilter);
+    onFilter({ title: titleFilter, rating: ratingFilter });
   };
-
   return (
     <div className="filter">
       <input
