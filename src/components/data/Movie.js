@@ -1,20 +1,21 @@
- export const movies=[
+import images from "../assets/images.jpg"
+export const movies=[
     {
       "title": "Film 1",
       "description": "Description du film 1.",
-      "posterURL": "https://example.com/poster1.jpg",
+      "posterURL": images,
       "rating": 7.5
     },
     {
       "title": "Film 2",
       "description": "Description du film 2.",
-      "posterURL": "https://example.com/poster2.jpg",
+      "posterURL": images,
       "rating": 8.2
     },
     {
       "title": "Film 3",
       "description": "Description du film 3.",
-      "posterURL": "https://example.com/poster3.jpg",
+      "posterURL": images,
       "rating": 6.8
     }
   ]

@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 
 
+
 const Filter = ({ onFilter }) => {
   const [titleFilter, setTitleFilter] = useState('');
   const [ratingFilter, setRatingFilter] = useState('');
 
   const handleTitleChange = event => {
-    setTitleFilter(event.target.value);
-    onFilter({ title: event.target.value, rating: ratingFilter });
+    const titlefiltrech= event.target.value
+
+    setTitleFilter(titlefiltrech);
+    onFilter({ title:titlefiltrech, rating: ratingFilter });
   };
 
   const handleRatingChange = event => {
-    setRatingFilter(event.target.value);
-    onFilter({ title: titleFilter, rating: event.target.value });
+    const ratingfiltrech= event.target.value
+    setRatingFilter(ratingfiltrech);
+    onFilter({ title: titleFilter, rating: ratingfiltrech });
   };
 
   return (
