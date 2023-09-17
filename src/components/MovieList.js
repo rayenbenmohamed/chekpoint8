@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MovieCard from './MovieCard';
 import { movies } from './data/Movie.js';
 import Filter from './Filter';
+import { Link } from 'react-router-dom';
 
 const MovieList = () => {
   const [filteredMovies, setFilteredMovies] = useState(movies);
@@ -20,7 +21,9 @@ const MovieList = () => {
 
       <div className="movie-list">
         {filteredMovies.map((movie) => (
-          <MovieCard key={movie.title} movie={movie} />
+          <Link to={`/Movie/${movie.id}`} key={movie.title}>
+          <MovieCard  movie={movie} />
+          </Link>
         ))}
       </div>
     </>
